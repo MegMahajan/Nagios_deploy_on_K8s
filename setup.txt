@@ -1,0 +1,24 @@
+ 1 Run below command to create pod
+
+    kubectl create -f nagios.yaml
+
+2.  Wait for deployment & pods to get running status
+    kubectl get deploy
+
+    kubectl get pods
+
+
+
+3.  Run below command to login on pod & open shell 
+
+    kubectl exec -it (pod name) -- /bin/bash
+
+4.  set username & password for Nagios core web interface
+
+       (Refer your task username & password)
+
+    htpasswd /opt/nagios/etc/htpasswd.users xFusionCorp
+    
+5. curl -u xFusionCorp http://localhost/
+enter password
+check host link.
